@@ -15,11 +15,11 @@ class App extends React.Component {
 
   componentWillMount() {
     this.setState({data: [
-        {"age":"10","height":"152","name":"Tony"},
-        {"age":"12","height":"148","name":"Jessica"},
-        {"age":"9","height":"135","name":"Andrew"},
-        {"age":"10","height":"145","name":"Emily"},
-        {"age":"11","height":"141","name":"Richard"}]});
+        {"age":"10.1","height":"152.1","name":"Tony"},
+        {"age":"12.1","height":"148.1","name":"Jessica"},
+        {"age":"9.1","height":"135.1","name":"Andrew"},
+        {"age":"10.1","height":"145.1","name":"Emily"},
+        {"age":"11.1","height":"141.1","name":"Richard"}]});
     
   }
 

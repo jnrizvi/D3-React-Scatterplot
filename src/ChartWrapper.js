@@ -3,12 +3,16 @@ import D3Chart from "./D3Chart.js";
 
 // this class is the bridge between React code and D3 code
 class ChartWrapper extends React.Component {
-  
+  constructor() {
+    super();
+    this.myRef = React.createRef();
+  }
+
     // executes once as soon as the component is mounted to the screen
   componentDidMount() {
     // refers to the ref in the div
     this.setState({
-      chart: new D3Chart(this.refs.chart, this.props.data, this.props.updateName)
+      chart: new D3Chart(this.myRef.current, this.props.data, this.props.updateName)
     });
   }
 
@@ -25,7 +29,7 @@ class ChartWrapper extends React.Component {
 
   render() {
     // An empty div, which we append a new D3Chart object to when a component first mounts
-    return <div className="chart-area" ref="chart" />;
+    return <div className="chart-area" ref={this.myRef} />;
   }
 }
 
